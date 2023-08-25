@@ -24,7 +24,7 @@ class MiniMax:
 
         return bestMove
 
-    def playGameState(self, computerMove) -> int:
+    def playGameState(self, computerMove:True|False) -> int:
         
         if self.game.checkWin("X"):
             return 10

@@ -1,10 +1,11 @@
 import re
 import Game
 import platform
+import time
 from os import system
 from MiniMaxAlgorythm import MiniMax
 
-def insertMove(board):
+def insertMove(board:dict):
 
     sqaure_to_play = input("Enter the number you want to play (q:to quit): ")
 
@@ -47,23 +48,25 @@ def startGame():
     while turns < 10:
         
         clean_screen()
-
         game.showGameBoard()
         
         if turns % 2 == 0:
-            move=insertMove(game.getBoard)
+            move=insertMove(game.getBoard)  
             symbol = "O"   
         else:
-            move = cpu.generateGameState()
             symbol ="X"
+            move = cpu.generateGameState()
+           
 
         game.updateGameBoard(move,symbol)
-
-        if game.isgameOver(symbol): break
+        gameState = game.isgameOver(symbol)
+        if gameState != None:
+            clean_screen()
+            game.showGameBoard()
+            print(gameState)
+            break
         turns += 1
-
-    clean_screen()
-    game.showGameBoard()
+   
 
 if __name__ == "__main__":
     startGame()
