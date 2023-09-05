@@ -22,11 +22,7 @@ def insertMove(board:dict):
     else:
         print("Invalid number!!!")
         return insertMove(board)
-    
-def goFirst():
-    
-    choose = input("Would you like  to go first? (y/n)\n->")
-    return 1 if re.fullmatch('y|Y', choose) else 0
+
 
 def clean_screen():
     
@@ -51,7 +47,7 @@ def startGame():
         game.showGameBoard()
         
         if turns % 2 == 0:
-            move=insertMove(game.getBoard)  
+            move = insertMove(game.getBoard)  
             symbol = "O"   
         else:
             symbol ="X"
@@ -60,11 +56,13 @@ def startGame():
 
         game.updateGameBoard(move,symbol)
         gameState = game.isgameOver(symbol)
+
         if gameState != None:
             clean_screen()
             game.showGameBoard()
             print(gameState)
             break
+
         turns += 1
    
 
