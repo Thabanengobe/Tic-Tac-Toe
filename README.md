@@ -14,7 +14,7 @@ There are no special dependencies required to run this game. You just need Pytho
 
 3. Navigate to the project directory using the `cd` command.
 
-4. Run the game by executing the following command: python3 Main.py
+4. Run the game by executing the following command: `python3 Main.py`
 
 
 5. Follow the on-screen instructions to play the game.
