@@ -14,7 +14,7 @@ There are no special dependencies required to run this game. You just need Pytho
 
 3. Navigate to the project directory using the `cd` command.
 
-4. Run the game by executing the following command: pyhon3 Main.py
+4. Run the game by executing the following command: python3 Main.py
 
 
 5. Follow the on-screen instructions to play the game.
@@ -23,7 +23,7 @@ There are no special dependencies required to run this game. You just need Pytho
 
 - The game starts with an empty 3x3 grid.
 
-- Player 1 (Human) is "X", and Player 2 (AI) is "O".
+- Player 1 (Human) is "O", and Player 2 (AI) is "X".
 
 - Players take turns to make their moves by entering the row and column where they want to place their symbol.
 
